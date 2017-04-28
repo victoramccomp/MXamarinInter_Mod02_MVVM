@@ -17,3 +17,5 @@ C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp\o
 C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp\bin\Debug\MonkeyHubApp.dll.mdb
 C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp\obj\Debug\MonkeyHubApp.dll.mdb
 C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp\bin\Debug\MonkeyHubApp.dll.mdb
+C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp\obj\Debug\MonkeyHubApp.dll.mdb
+C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp\bin\Debug\MonkeyHubApp.dll.mdb
