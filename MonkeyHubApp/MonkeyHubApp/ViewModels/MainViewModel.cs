@@ -14,8 +14,13 @@ namespace MonkeyHubApp.ViewModels
             set
             {
                 _descricao = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Descricao)));
+                OnPropertyChange(nameof(Descricao);
             }
+        }
+
+        protected virtual void OnPropertyChange(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public MainViewModel()
