@@ -11,7 +11,11 @@ namespace MonkeyHubApp.ViewModels
         public string Descricao
         {
             get { return _descricao; }
-            set { _descricao = value; }
+            set
+            {
+                _descricao = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Descricao)));
+            }
         }
 
         public MainViewModel()
@@ -21,7 +25,6 @@ namespace MonkeyHubApp.ViewModels
             Task.Delay(3000).ContinueWith(t =>
             {
                 Descricao = "Meu texto mudou!";
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Descricao)));
             });
         }
     }
