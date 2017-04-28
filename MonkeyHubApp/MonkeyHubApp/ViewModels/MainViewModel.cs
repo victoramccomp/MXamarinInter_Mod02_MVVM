@@ -1,30 +1,15 @@
 ﻿using System.Threading.Tasks;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Collections.Generic;
 
 namespace MonkeyHubApp.ViewModels
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : BaseViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        private int _idade;
 
-        protected virtual void OnPropertyChange([CallerMemberName]string propertyName = null)
+        public int Idade
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName]string propertyName = null)
-        {
-            if (EqualityComparer<T>.Default.Equals(storage, value))
-            {
-                return false;
-            }
-
-            storage = value;
-            OnPropertyChange();
-
-            return true;
+            get { return _idade; }
+            set { _idade = value; }
         }
 
         private string _descricao;
