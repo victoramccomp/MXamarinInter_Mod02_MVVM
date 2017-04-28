@@ -23,9 +23,15 @@ namespace MonkeyHubApp.ViewModels
         {
             Descricao = "Olá Mundo! Eu estou aqui!";
 
-            Task.Delay(3000).ContinueWith(t =>
+            Task.Delay(3000).ContinueWith(async t =>
             {
                 Descricao = "Meu texto mudou!";
+
+                for (int i = 0; i < 10; i++)
+                {
+                    await Task.Delay(1000);
+                    Descricao = $"Meu texto mudou! {i}";
+                }
             });
         }
     }
