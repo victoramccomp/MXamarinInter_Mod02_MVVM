@@ -9,7 +9,7 @@ namespace MonkeyHubApp.ViewModels
         public int Idade
         {
             get { return _idade; }
-            set { _idade = value; }
+            set { SetProperty(ref _idade, value); }
         }
 
         private string _descricao;

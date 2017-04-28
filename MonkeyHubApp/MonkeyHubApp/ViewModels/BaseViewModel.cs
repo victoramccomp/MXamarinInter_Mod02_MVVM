@@ -22,7 +22,7 @@ namespace MonkeyHubApp.ViewModels
             }
 
             storage = value;
-            OnPropertyChange();
+            OnPropertyChange(propertyName);
 
             return true;
         }
