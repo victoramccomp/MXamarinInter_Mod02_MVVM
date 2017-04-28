@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace MonkeyHubApp.ViewModels
 {
@@ -14,11 +15,11 @@ namespace MonkeyHubApp.ViewModels
             set
             {
                 _descricao = value;
-                OnPropertyChange(nameof(Descricao);
+                OnPropertyChange();
             }
         }
 
-        protected virtual void OnPropertyChange(string propertyName)
+        protected virtual void OnPropertyChange([CallerMemberName]string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
