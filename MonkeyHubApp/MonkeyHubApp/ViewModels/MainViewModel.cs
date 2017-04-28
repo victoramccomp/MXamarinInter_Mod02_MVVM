@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Collections.Generic;
 
 namespace MonkeyHubApp.ViewModels
 {
@@ -15,11 +16,12 @@ namespace MonkeyHubApp.ViewModels
 
         protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName]string propertyName = null)
         {
-            if (storage.Equals(value))
+            if (EqualityComparer<T>.Default.Equals(storage, value))
             {
                 return false;
             }
 
+            storage = value;
             OnPropertyChange();
 
             return true;
