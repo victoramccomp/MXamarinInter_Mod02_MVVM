@@ -13,8 +13,13 @@ namespace MonkeyHubApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        protected bool SetProperty(ref string storage, string value, [CallerMemberName]string propertyName = null)
+        protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName]string propertyName = null)
         {
+            if (storage.Equals(value))
+            {
+                return false;
+            }
+
             OnPropertyChange();
 
             return true;
