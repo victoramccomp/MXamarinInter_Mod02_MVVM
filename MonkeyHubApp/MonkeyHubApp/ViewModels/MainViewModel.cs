@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -18,6 +19,8 @@ namespace MonkeyHubApp.ViewModels
                     SearchCommand.ChangeCanExecute();
             }
         }
+
+        public ObservableCollection<string> Resultados { get; }
 
         public Command SearchCommand { get; }
 
