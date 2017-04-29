@@ -1,38 +1,45 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace MonkeyHubApp.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private int _idade;
+        private string _searchTerm;
 
-        public int Idade
+        public string SearchTerm
         {
-            get { return _idade; }
-            set { SetProperty(ref _idade, value); }
+            get { return _searchTerm; }
+            set
+            {
+                if(SetProperty(ref _searchTerm, value))
+                    SearchCommand.ChangeCanExecute();
+            }
         }
 
-        private string _descricao;
-        public string Descricao
-        {
-            get { return _descricao; }
-            set { SetProperty(ref _descricao, value); }
-        }
+        public Command SearchCommand { get; }
 
         public MainViewModel()
         {
-            Descricao = "Olá Mundo! Eu estou aqui!";
+            SearchCommand = new Command(ExecuteSearchCommand, CanExecuteSearchCommand);
+        }
 
-            Task.Delay(3000).ContinueWith(async t =>
-            {
-                Descricao = "Meu texto mudou!";
+        async void ExecuteSearchCommand()
+        {
+            await Task.Delay(2000);
+            bool resposta = await App.Current.MainPage.DisplayAlert("MonkeyHubApp", $"Você pesquisou por '{SearchTerm}'?", "YES", "NO");
 
-                for (int i = 0; i < 10; i++)
-                {
-                    await Task.Delay(1000);
-                    Descricao = $"Meu texto mudou! {i}";
-                }
-            });
+            if(resposta)
+                await App.Current.MainPage.DisplayAlert("MonkeyHubApp", "Obrigado", "OK");
+            else
+                await App.Current.MainPage.DisplayAlert("MonkeyHubApp", "Vaza!", "OK");
+        }   
+
+        bool CanExecuteSearchCommand()
+        {
+            return string.IsNullOrWhiteSpace(SearchTerm) == false;                 
         }
     }
 }
