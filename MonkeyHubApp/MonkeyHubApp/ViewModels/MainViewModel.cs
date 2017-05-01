@@ -27,17 +27,30 @@ namespace MonkeyHubApp.ViewModels
         public MainViewModel()
         {
             SearchCommand = new Command(ExecuteSearchCommand, CanExecuteSearchCommand);
+
+            Resultados = new ObservableCollection<string>(new[] { "abc", "cde", "fgh", "ijk", "lmn", "opq", "rst", "uvw", "xyz" });
         }
 
         async void ExecuteSearchCommand()
         {
-            await Task.Delay(2000);
+            //await Task.Delay(2000);
             bool resposta = await App.Current.MainPage.DisplayAlert("MonkeyHubApp", $"Você pesquisou por '{SearchTerm}'?", "YES", "NO");
 
-            if(resposta)
+            if (resposta)
+            {
                 await App.Current.MainPage.DisplayAlert("MonkeyHubApp", "Obrigado", "OK");
-            else
+                Resultados.Clear();
+
+                for (int i = 1; i <= 30; i++)
+                {
+                    Resultados.Add($"Sim {i}");
+                }
+            }
+            else 
+            {
                 await App.Current.MainPage.DisplayAlert("MonkeyHubApp", "Vaza!", "OK");
+                Resultados.Clear();
+            }
         }   
 
         bool CanExecuteSearchCommand()

@@ -7,5 +7,6 @@
     <StackLayout>
         <Entry Text="{Binding SearchTerm}"/>
         <Button Text="Pesquisar" Command="{Binding SearchCommand}"/>
+        <ListView ItemsSource="{Binding Resultados}"/>
     </StackLayout>
 </ContentPage>
