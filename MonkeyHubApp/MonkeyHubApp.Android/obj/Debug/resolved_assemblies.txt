@@ -45,3 +45,10 @@ C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.A
 C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.Android\obj\Debug\android\assets\System.Runtime.InteropServices.dll
 C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.Android\obj\Debug\android\assets\System.Resources.ResourceManager.dll
 C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.Android\obj\Debug\android\assets\System.Diagnostics.Tools.dll
+C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.Android\obj\Debug\android\assets\Newtonsoft.Json.dll
+C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.Android\obj\Debug\android\assets\System.Xml.XDocument.dll
+C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.Android\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll
+C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.Android\obj\Debug\android\assets\System.Text.Encoding.dll
+C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.Android\obj\Debug\android\assets\System.Text.Encoding.Extensions.dll
+C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.Android\obj\Debug\android\assets\Microsoft.CSharp.dll
+C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.Android\obj\Debug\android\assets\Mono.CSharp.dll
