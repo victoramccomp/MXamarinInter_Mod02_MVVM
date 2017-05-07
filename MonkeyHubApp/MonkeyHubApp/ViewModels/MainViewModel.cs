@@ -44,7 +44,7 @@ namespace MonkeyHubApp.ViewModels
             get { return _searchTerm; }
             set
             {
-                if(SetProperty(ref _searchTerm, value))
+                if (SetProperty(ref _searchTerm, value))
                     SearchCommand.ChangeCanExecute();
             }
         }
@@ -72,7 +72,7 @@ namespace MonkeyHubApp.ViewModels
                 var tagsRetornadasDoServico = await GetTagsAsync();
                 Resultados.Clear();
 
-                if(tagsRetornadasDoServico != null)
+                if (tagsRetornadasDoServico != null)
                 {
                     foreach (var tag in tagsRetornadasDoServico)
                     {
@@ -80,16 +80,16 @@ namespace MonkeyHubApp.ViewModels
                     }
                 }
             }
-            else 
+            else
             {
                 await App.Current.MainPage.DisplayAlert("MonkeyHubApp", "Vaza!", "OK");
                 Resultados.Clear();
             }
-        }   
+        }
 
         bool CanExecuteSearchCommand()
         {
-            return string.IsNullOrWhiteSpace(SearchTerm) == false;                 
+            return string.IsNullOrWhiteSpace(SearchTerm) == false;
         }
     }
 }

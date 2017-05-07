@@ -1,0 +1,2 @@
+C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp.UWP\MonkeyHubApp.UWP.csproj;x86
+C:\Users\victo\Source\Repos\MXamarinInter_Mod02_MVVM\MonkeyHubApp\MonkeyHubApp\MonkeyHubApp.csproj;neutral
